@@ -39,10 +39,10 @@ class Model_users extends CI_Model
 		//return $query->result();
 	}
 
-	public function id_kuesioner()
+	public function id_pertanyaan()
 	{
 		//$this->db->order_by('status_kuesioner', 'ASC')
-		$hasil = $this->db->query("SELECT id_kuesioner FROM tb_pertanyaan WHERE id_metode = 'kue' ORDER BY id_kuesioner");
+		$hasil = $this->db->query("SELECT id_pertanyaan FROM tb_pertanyaan ORDER BY id_pertanyaan");
 		//$query = $this->db->get('kuisioner');
 		if($hasil->num_rows() > 0){
 			return $hasil->result();
@@ -52,10 +52,10 @@ class Model_users extends CI_Model
 	}
 
 
-	public function list_kuesioner()
+	public function list_pertanyaan()
 	{
 		//$this->db->order_by('status_kuesioner', 'ASC')
-		$hasil = $this->db->query("SELECT pertanyaan FROM tb_pertanyaan WHERE id_metode='kue' ");
+		$hasil = $this->db->query("SELECT pertanyaan FROM tb_pertanyaan ");
 		//$query = $this->db->get('kuisioner');
 		if($hasil->num_rows() > 0){
 			return $hasil->result()	;

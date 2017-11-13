@@ -13,10 +13,10 @@ public function __construct()
 public function index()
 {
     $unit=$this->session->userdata('nama','nopeg');
-    $data['id_kuesioner']  = $this->model_users->id_kuesioner();
-    $data['pertanyaan']  = $this->model_users->list_kuesioner();
-    $data['varconstruct']  = $this->model_users->type_construct();
-    $this->load->view('user/hanya_user', $data);
+    $data['id_pertanyaan']  = $this->model_users->id_pertanyaan();
+    $data['pertanyaan']  = $this->model_users->list_pertanyaan();
+    //$data['varconstruct']  = $this->model_users->type_construct();
+    $this->load->view('user/view_user', $data);
 
 
 // print_r($data['id_kuesioner']);

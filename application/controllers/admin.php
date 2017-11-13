@@ -10,9 +10,9 @@ class admin extends CI_Controller {
 
   public function index()
   {
-    $hehe  = $this->model_users->rata2construct();
+    
     $unit=$this->session->userdata('admin_username');
-  $this->load->view('header2');  
+  $this->load->view('header2');
   $this->load->view('admin/corporate');
   $this->load->view('footer');
   //  $this->load->view('chart');
@@ -116,28 +116,28 @@ class admin extends CI_Controller {
 		$this->load->view('kuesioner.php');
 		$this->load->view('footer.php');
 	}
-	
+
 	 	public function fgd()
 	{
 		$this->load->view('header2.php');
 		$this->load->view('fgd.php');
 		$this->load->view('footer.php');
 	}
-	
+
 	 	public function presentation()
 	{
 		$this->load->view('header2.php');
 		$this->load->view('presentation.php');
 		$this->load->view('footer.php');
 	}
-	
+
 	 	public function interview()
 	{
 		$this->load->view('header2.php');
 		$this->load->view('interview.php');
 		$this->load->view('footer.php');
 	}
-	
+
 	 	public function observation()
 	{
 		$this->load->view('header2.php');
@@ -148,27 +148,27 @@ class admin extends CI_Controller {
 	public function import_kuesioner(){
 		$this->load->view('import_php/import_kuesioner');
 	}
-	
+
 		public function import_fgd(){
 		$this->load->view('import_php/import_fgd');
 	}
-	
+
 		public function import_interview(){
 		$this->load->view('import_php/import_interview');
 	}
-	
+
 		public function import_presentation(){
 		$this->load->view('import_php/import_presentation');
 	}
-	
+
 		public function import_observation(){
 		$this->load->view('import_php/import_observation');
 	}
-	
+
 	public function sukses(){
 		$this->load->view('import_php/sukses');
 	}
-	
+
 	public function kuesioner_form(){
 	$this->load->view('import_php/kuesioner');
 	}
@@ -183,13 +183,13 @@ class admin extends CI_Controller {
 	}
 	public function presentation_form(){
 		$this->load->view('import_php/presentasi');
-		
+
 	}
 public function corporate(){
   $this->load->view('header2');
   $this->load->view('admin/corporate');
   $this->load->view('footer');
-  
+
   }
 
 public function jktdc(){
@@ -250,7 +250,7 @@ public function jktgi(){
   $this->load->view('header2');
 	$this->load->view('admin/dashboard_jktgi');
   $this->load->view('footer');
-  
+
 }
 
 public function jktcd(){

@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
-    
+
 <style>
       /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
       @import url(https://fonts.googleapis.com/css?family=Open+Sans);
@@ -22,13 +22,13 @@
       <link rel="stylesheet" href="<?php echo base_url();?>/assets/css/login-style.css">
     <!-- END -->
     <!-- Bootstrap -->
-    <link href="<?php echo base_url();?>/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>/assets/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="<?php echo base_url();?>/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>/assets/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
-    <link href="<?php echo base_url();?>/vendors/nprogress/nprogress.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>/assets/vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- Animate.css -->
-    <link href="<?php echo base_url();?>/vendors/animate.css/animate.min.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>/assets/vendors/animate.css/animate.min.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
 <!--    <link href="../build/css/custom.css" rel="stylesheet"> -->

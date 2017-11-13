@@ -164,16 +164,7 @@ class Model_users extends CI_Model
 		}
 	}
 
-	public function type_construct()
-	{
-		$type = $this->db->query("SELECT construct.varconstruct FROM construct INNER JOIN tb_pertanyaan ON tb_pertanyaan.id_construct=construct.id_construct WHERE id_metode='kue';");
-		if($type->num_rows() > 0)
-		{
-			return $type->result();
-		} else {
-			return "kosong";
-		}
-	}
+
 
 	public function simpan($hasil,$q, $id)
 	{
@@ -201,48 +192,7 @@ class Model_users extends CI_Model
      	//Query insert into
 	}
 
-		public function rata2construct(){
-			$hasil = $this->db->query("SELECT construct.varconstruct, AVG(hasil_nilai.hasil_nilai_result) AS rerata_dimensi FROM hasil_nilai INNER JOIN tb_pertanyaan ON hasil_nilai.id_kuesioner=tb_pertanyaan.id_kuesioner INNER JOIN construct ON tb_pertanyaan.id_construct=construct.id_construct GROUP BY varconstruct ");
-			//$query = $this->db->get('kuisioner');
-			if($hasil->num_rows() > 0){
-				return $hasil->result()	;
-			} else{
-				return "kosong";
-			}
-		}
-		public function rata2constructDirektorat($dir){
-			$hasil = $this->db->
-			query("SELECT construct.varconstruct, AVG(hasil_nilai.hasil_nilai_result) AS rerata_dimensi
-FROM hasil_nilai
-INNER JOIN tb_pertanyaan ON hasil_nilai.id_kuesioner=tb_pertanyaan.id_kuesioner
-INNER JOIN construct ON tb_pertanyaan.id_construct=construct.id_construct
-INNER JOIN tb_pegawai on hasil_nilai.nopeg=tb_pegawai.nopeg
-WHERE direktorat='$dir'
-GROUP BY varconstruct");
-			//$query = $this->db->get('kuisioner');
-			if($hasil->num_rows() > 0){
-				return $hasil->result()	;
-			} else{
-				return "kosong";
-			}
-		}
 
-		public function ConsDirektorat($dir , $cons){
-			$hasil = $this->db->
-			query("SELECT tb_pegawai.unit, AVG(hasil_nilai.hasil_nilai_result) AS rerata_dimensi
-FROM hasil_nilai
-INNER JOIN tb_pertanyaan ON hasil_nilai.id_kuesioner=tb_pertanyaan.id_kuesioner
-INNER JOIN construct ON tb_pertanyaan.id_construct=construct.id_construct
-INNER JOIN tb_pegawai on hasil_nilai.nopeg=tb_pegawai.nopeg
-WHERE direktorat='$dir'and construct.id_construct='$cons'
-GROUP BY unit");
-			//$query = $this->db->get('kuisioner');
-			if($hasil->num_rows() > 0){
-				return $hasil->result()	;
-			} else{
-				return "kosong";
-			}
-		}
 
 
 
@@ -303,17 +253,6 @@ GROUP BY unit");
 	        return $dd;
 	    }
 
-			function gauge_chart(){
-				$hasil = $this->db->query("SELECT construct.varconstruct, AVG(hasil_nilai.hasil_nilai_result) AS rerata_dimensi FROM hasil_nilai INNER JOIN tb_pertanyaan ON hasil_nilai.id_kuesioner=tb_pertanyaan.id_kuesioner INNER JOIN construct ON tb_pertanyaan.id_construct=construct.id_construct GROUP BY varconstruct ");
-				//$query = $this->db->get('kuisioner');
-				if($hasil->num_rows() > 0){
-					return $hasil->result()	;
-				} else{
-					return "kosong";
-				}
-
-
-
-			}
+			
 
 	}

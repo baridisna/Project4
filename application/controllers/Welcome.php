@@ -39,7 +39,7 @@ class Welcome extends CI_Controller {
 				print_r($data);
 				print_r($newdata);
 				print_r($io);
-				redirect('admin');
+				redirect('SuperAdmin');
 
 		}
 		else {
@@ -51,8 +51,7 @@ class Welcome extends CI_Controller {
 					print_r($data);
 					print_r($newdata);
 					print_r($io);
-					redirect('Asessment_dedy');
-
+					redirect('AdminInternal');
 			}
 		}
 
@@ -79,7 +78,7 @@ class Welcome extends CI_Controller {
 			    'nama'  => $d->nama
 			);
 			$this->session->set_userdata($newdata);
-			redirect('kuesioner');
+			redirect('user');
 			//print_r("ada");
 		}
 	}

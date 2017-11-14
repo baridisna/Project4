@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 13, 2017 at 05:04 AM
+-- Generation Time: Nov 14, 2017 at 04:14 AM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 5.5.38
 
@@ -32,6 +32,16 @@ CREATE TABLE `dimensi` (
   `keterangan` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `dimensi`
+--
+
+INSERT INTO `dimensi` (`id_dimensi`, `var_dimensi`, `keterangan`) VALUES
+(1, 'Knowledge Creation', ''),
+(2, 'Knowledge Strorage', ''),
+(3, 'Knowledge Distribution', ''),
+(4, 'Knowledge Aplication', '');
+
 -- --------------------------------------------------------
 
 --
@@ -42,8 +52,39 @@ CREATE TABLE `hasil_nilai` (
   `id_hasil_nilai` int(10) NOT NULL,
   `id_pertanyaan` int(4) NOT NULL,
   `nopeg` int(8) NOT NULL,
-  `nilai` int(4) NOT NULL
+  `frekuensi` int(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `hasil_nilai`
+--
+
+INSERT INTO `hasil_nilai` (`id_hasil_nilai`, `id_pertanyaan`, `nopeg`, `frekuensi`) VALUES
+(1, 1, 514865, 2),
+(2, 2, 514865, 0),
+(3, 3, 514865, 1),
+(4, 4, 514865, 1),
+(5, 5, 514865, 0),
+(6, 6, 514865, 0),
+(7, 7, 514865, 0),
+(8, 8, 514865, 0),
+(9, 9, 514865, 0),
+(10, 10, 514865, 0),
+(11, 11, 514865, 0),
+(12, 12, 514865, 0),
+(13, 13, 514865, 0),
+(14, 14, 514865, 0),
+(15, 15, 514865, 0),
+(16, 16, 514865, 0),
+(17, 17, 514865, 1),
+(18, 18, 514865, 1),
+(19, 19, 514865, 0),
+(20, 20, 514865, 0),
+(21, 21, 514865, 0),
+(22, 22, 514865, 0),
+(23, 23, 514865, 0),
+(24, 24, 514865, 0),
+(25, 25, 514865, 0);
 
 -- --------------------------------------------------------
 
@@ -8300,9 +8341,41 @@ INSERT INTO `tb_pegawai` (`nopeg`, `nama`, `gender`, `tanggal_lahir`, `status_pe
 CREATE TABLE `tb_pertanyaan` (
   `id_pertanyaan` int(4) NOT NULL,
   `id_dimensi` int(4) NOT NULL,
-  `pertanyaan` varchar(100) NOT NULL,
-  `dasar_perhitungan` varchar(55) NOT NULL
+  `deskripsi` varchar(100) NOT NULL,
+  `dasar_perhitungan` varchar(55) NOT NULL,
+  `poin` int(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tb_pertanyaan`
+--
+
+INSERT INTO `tb_pertanyaan` (`id_pertanyaan`, `id_dimensi`, `deskripsi`, `dasar_perhitungan`, `poin`) VALUES
+(1, 1, 'Mengikuti training inhouse/publik dan sosialisasi', 'per 1 hari', 10),
+(2, 1, 'Belajar melalui eLearning', 'per 1 modul', 30),
+(3, 1, 'Membaca buku dan mempresentasikan resume', 'per 1 buku', 50),
+(4, 1, 'Mengikuti learning forum internal/eksternal', 'per 1 kali hadir', 10),
+(5, 1, 'Menjadi observer dalam program training inhouse/publik', 'per I hari', 10),
+(6, 1, 'Melaksanakan coaching dengan atasan', 'per 1 kegiatan', 10),
+(7, 1, 'Mengikuti job assignment/magang', 'per 1 kegiatan', 50),
+(8, 1, 'Benchmarking', 'per 1 kegiatan', 50),
+(9, 1, 'Melaksanakan riset internal', 'per 1 project', 50),
+(10, 1, 'Melaksanakan role play', 'per 1 kegiatan', 25),
+(11, 2, 'Menulis artikel di portal', 'per 1 artikel', 15),
+(12, 2, 'Menyampaikan ide di portal', 'per 1 ide', 10),
+(13, 2, 'Menertibkan sumber pengetahuan yang menjadi tanggung jawabnya', 'per tahun', 50),
+(14, 2, 'Mendesain modul eLearning', 'per 1 jam modul', 10),
+(15, 2, 'Mendesain modul training', 'per 1 jam modul', 10),
+(16, 2, 'Mendesain modul sosialisasi', 'per 1 jam modul', 10),
+(17, 2, 'Menjadi team perumus SOP/Product Feature', 'per 1 proyek', 30),
+(18, 3, 'Menulis artikel', 'per 1 artikel', 20),
+(19, 3, 'Mengajar (inhouse/eksternal)', 'per 1 jam', 10),
+(20, 3, 'Menjadi pembicara forum internal/eksternal', 'per 1 kegiatan', 25),
+(21, 3, 'Menjadi mentor on the job training/magang', 'per 1 orang', 20),
+(22, 3, 'Menjadi penguji presentasi (mis. OJT/PKWT)', 'per 1 orang', 10),
+(23, 3, 'Melaksanakan coaching bawahan', 'per 1 kegiatan', 10),
+(24, 4, 'Terlibat dalam improvement/problem solver team', 'per 1 project', 100),
+(25, 4, 'Mengagas problem solving', 'per 1 solving', 75);
 
 --
 -- Indexes for dumped tables
@@ -8343,17 +8416,17 @@ ALTER TABLE `tb_pertanyaan`
 -- AUTO_INCREMENT for table `dimensi`
 --
 ALTER TABLE `dimensi`
-  MODIFY `id_dimensi` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_dimensi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `hasil_nilai`
 --
 ALTER TABLE `hasil_nilai`
-  MODIFY `id_hasil_nilai` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_hasil_nilai` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 --
 -- AUTO_INCREMENT for table `tb_pertanyaan`
 --
 ALTER TABLE `tb_pertanyaan`
-  MODIFY `id_pertanyaan` int(4) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_pertanyaan` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 --
 -- Constraints for dumped tables
 --

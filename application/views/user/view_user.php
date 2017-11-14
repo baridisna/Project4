@@ -87,7 +87,7 @@
                           foreach ($pertanyaan1 as $p){
                             echo "<tr><th scope='row'>$p->id_pertanyaan</th>
                                       <td>$p->deskripsi</td>
-                                      <td><input type='number' name='$p->id_pertanyaan' min='0' max='50' value='0'></td>
+                                      <td><input type='number' name='$p->id_pertanyaan' min='0' max='50' value='$p->frekuensi'></td>
                                       <td>$p->dasar_perhitungan</td>
                                       <td>$p->poin</td>
                                       <td><div class='input-group input-file' name='Fichier1'>
@@ -120,7 +120,7 @@
                           foreach ($pertanyaan2 as $p){
                             echo "<tr><th scope='row'>$p->id_pertanyaan</th>
                                       <td>$p->deskripsi</td>
-                                      <td><input type='number' name='$p->id_pertanyaan' min='0' max='50' value='0'></td>
+                                      <td><input type='number' name='$p->id_pertanyaan' min='0' max='50' value='$p->frekuensi'></td>
                                       <td>$p->dasar_perhitungan</td>
                                       <td>$p->poin</td>
                                       <td><div class='input-group input-file' name='Fichier1'>
@@ -153,7 +153,7 @@
                           foreach ($pertanyaan3 as $p){
                             echo "<tr><th scope='row'>$p->id_pertanyaan</th>
                                       <td>$p->deskripsi</td>
-                                      <td><input type='number' name='$p->id_pertanyaan' min='0' max='50' value='0'></td>
+                                      <td><input type='number' name='$p->id_pertanyaan' min='0' max='50' value='$p->frekuensi'></td>
                                       <td>$p->dasar_perhitungan</td>
                                       <td>$p->poin</td>
                                       <td><div class='input-group input-file' name='Fichier1'>
@@ -186,7 +186,7 @@
                           foreach ($pertanyaan4 as $p){
                             echo "<tr><th scope='row'>$p->id_pertanyaan</th>
                                       <td>$p->deskripsi</td>
-                                      <td><input type='number' name='$p->id_pertanyaan' min='0' max='50' value='0'></td>
+                                      <td><input type='number' name='$p->id_pertanyaan' min='0' max='50' value='$p->frekuensi'></td>
                                       <td>$p->dasar_perhitungan</td>
                                       <td>$p->poin</td>
                                       <td><input type='file'></td>

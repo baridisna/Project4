@@ -54,7 +54,7 @@ class Model_users extends CI_Model
 	public function list_pertanyaan1()
 	{
 		//$this->db->order_by('status_kuesioner', 'ASC')
-		$hasil = $this->db->query("SELECT id_pertanyaan, deskripsi, dasar_perhitungan, poin FROM tb_pertanyaan WHERE id_dimensi=1");
+		$hasil = $this->db->query("SELECT tb_pertanyaan.id_pertanyaan, deskripsi, dasar_perhitungan, poin, frekuensi FROM tb_pertanyaan JOIN hasil_nilai ON tb_pertanyaan.id_pertanyaan=hasil_nilai.id_pertanyaan WHERE id_dimensi=1");
 		//$query = $this->db->get('kuisioner');
 		if($hasil->num_rows() > 0){
 			return $hasil->result()	;
@@ -66,7 +66,7 @@ class Model_users extends CI_Model
 	public function list_pertanyaan2()
 	{
 		//$this->db->order_by('status_kuesioner', 'ASC')
-		$hasil = $this->db->query("SELECT id_pertanyaan, deskripsi, dasar_perhitungan, poin FROM tb_pertanyaan WHERE id_dimensi=2");
+		$hasil = $this->db->query("SELECT tb_pertanyaan.id_pertanyaan, deskripsi, dasar_perhitungan, poin, frekuensi FROM tb_pertanyaan JOIN hasil_nilai ON tb_pertanyaan.id_pertanyaan=hasil_nilai.id_pertanyaan WHERE id_dimensi=2");
 		//$query = $this->db->get('kuisioner');
 		if($hasil->num_rows() > 0){
 			return $hasil->result()	;
@@ -78,7 +78,7 @@ class Model_users extends CI_Model
 	public function list_pertanyaan3()
 	{
 		//$this->db->order_by('status_kuesioner', 'ASC')
-		$hasil = $this->db->query("SELECT id_pertanyaan, deskripsi, dasar_perhitungan, poin FROM tb_pertanyaan WHERE id_dimensi=3");
+		$hasil = $this->db->query("SELECT tb_pertanyaan.id_pertanyaan, deskripsi, dasar_perhitungan, poin, frekuensi FROM tb_pertanyaan JOIN hasil_nilai ON tb_pertanyaan.id_pertanyaan=hasil_nilai.id_pertanyaan WHERE id_dimensi=3");
 		//$query = $this->db->get('kuisioner');
 		if($hasil->num_rows() > 0){
 			return $hasil->result()	;
@@ -90,7 +90,7 @@ class Model_users extends CI_Model
 	public function list_pertanyaan4()
 	{
 		//$this->db->order_by('status_kuesioner', 'ASC')
-		$hasil = $this->db->query("SELECT id_pertanyaan, deskripsi, dasar_perhitungan, poin FROM tb_pertanyaan WHERE id_dimensi=4");
+		$hasil = $this->db->query("SELECT tb_pertanyaan.id_pertanyaan, deskripsi, dasar_perhitungan, poin, frekuensi FROM tb_pertanyaan JOIN hasil_nilai ON tb_pertanyaan.id_pertanyaan=hasil_nilai.id_pertanyaan WHERE id_dimensi=4");
 		//$query = $this->db->get('kuisioner');
 		if($hasil->num_rows() > 0){
 			return $hasil->result()	;

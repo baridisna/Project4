@@ -36,7 +36,6 @@ class User extends CI_Controller {
       //$data['varconstruct'] = $this->Model_users->type_construct();
       $id  = $this->Model_users->id_pertanyaan();
       $hasil = $this->input->post();
-      print_r($hasil);
       $q=count($hasil);
       $this->Model_users->simpan($hasil, $q, $id);
       $this->load->view('user/submitted');

@@ -75,7 +75,7 @@
                 <!-- End isi nilai-->
 
                 <!-- Ranking-->
-                <li><a><i class="fa fa-edit active"></i> Ranking <span class=""></span></a>
+                <li><a><i class="fa fa-edit active"></i> Profil <span class=""></span></a>
                 </li>
                 <!-- End ranking-->
 

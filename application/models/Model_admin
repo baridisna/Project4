@@ -1,0 +1,18 @@
+<?php 
+
+class Model_admin extends CI_Model
+{
+	public function dataPegawai()
+	{
+		//$unit = 'JKTOF';
+		// print_r($unit);
+		$hasil = $this->db->query("SELECT nopeg, nama_pegawai, unit FROM tb_pegawai WHERE unit=JKTOF");
+		if($hasil->num_rows() > 0){
+			return $hasil->result()	;
+		} else{
+			return "kosong";
+		}
+	}
+
+}
+?>

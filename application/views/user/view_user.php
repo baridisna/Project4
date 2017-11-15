@@ -63,7 +63,7 @@
                 <center><img src="<?php echo base_url();?>assets/images/sip2.png" width='300px' ></center>
                 <br /> <br /> <br />
                 <div class="x_panel">
-                  <form method="POST" action="<?php echo base_url();?>User/input_nilai" role="form">
+                  <form method="POST" action="<?php echo base_url();?>User/input_nilai" role="form" enctype="multipart/form-data>
                   <div class="x_title">
                     <h2><?php echo $dimensi[0]->var_dimensi; ?> <small> Berikan nilai yang sesuai !!</small></h2>
                     <div class="clearfix"></div>
@@ -84,16 +84,16 @@
                       </thead>
                       <tbody>
                         <?php $n=0; $j=0;
+                          $no=1;
                           foreach ($pertanyaan1 as $p){
-                            echo "<tr><th scope='row'>$p->id_pertanyaan</th>
+                            echo "<tr><th scope='row'>$no</th>
                                       <td>$p->deskripsi</td>
-                                      <td><input type='number' name='$p->id_pertanyaan' min='0' max='50' value='$p->frekuensi'></td>
+                                      <td><input type='number' name='$p->id_pertanyaan' min='0' max='50' value='0'></td>
                                       <td>$p->dasar_perhitungan</td>
                                       <td>$p->poin</td>
-                                      <td><div class='input-group input-file' name='Fichier1'>
-                                          <input type='file' >     
-                                      </div></td>
-                                  </tr>";}
+                                      <td><input type='file' name='berkas'></div></td>
+                                  </tr>";
+                                  $no++;}
                         ?>
                       </tbody>
                     </table>
@@ -116,17 +116,17 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <?php 
+                        <?php
+                          $no=1; 
                           foreach ($pertanyaan2 as $p){
-                            echo "<tr><th scope='row'>$p->id_pertanyaan</th>
+                            echo "<tr><th scope='row'>$no</th>
                                       <td>$p->deskripsi</td>
-                                      <td><input type='number' name='$p->id_pertanyaan' min='0' max='50' value='$p->frekuensi'></td>
+                                      <td><input type='number' name='$p->id_pertanyaan' min='0' max='50' value='0'></td>
                                       <td>$p->dasar_perhitungan</td>
                                       <td>$p->poin</td>
-                                      <td><div class='input-group input-file' name='Fichier1'>
-                                          <input type='file' >     
-                                      </div></td>
-                                  </tr>";}
+                                      <td><input type='file' name='berkas'></div></td>
+                                  </tr>";
+                                  $no++;}
                         ?>
                       </tbody>
                     </table>
@@ -149,17 +149,17 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <?php 
+                        <?php
+                          $no=1;
                           foreach ($pertanyaan3 as $p){
-                            echo "<tr><th scope='row'>$p->id_pertanyaan</th>
+                            echo "<tr><th scope='row'>$no</th>
                                       <td>$p->deskripsi</td>
-                                      <td><input type='number' name='$p->id_pertanyaan' min='0' max='50' value='$p->frekuensi'></td>
+                                      <td><input type='number' name='$p->id_pertanyaan' min='0' max='50' value='0'></td>
                                       <td>$p->dasar_perhitungan</td>
                                       <td>$p->poin</td>
-                                      <td><div class='input-group input-file' name='Fichier1'>
-                                          <input type='file' >     
-                                      </div></td>
-                                  </tr>";}
+                                      <td><input type='file' name='berkas'></div></td>
+                                  </tr>";
+                                  $no++;}
                         ?>
                       </tbody>
                     </table>
@@ -182,15 +182,17 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <?php 
+                        <?php
+                          $no=1; 
                           foreach ($pertanyaan4 as $p){
-                            echo "<tr><th scope='row'>$p->id_pertanyaan</th>
+                            echo "<tr><th scope='row'>$no</th>
                                       <td>$p->deskripsi</td>
-                                      <td><input type='number' name='$p->id_pertanyaan' min='0' max='50' value='$p->frekuensi'></td>
+                                      <td><input type='number' name='$p->id_pertanyaan' min='0' max='50' value='0'></td>
                                       <td>$p->dasar_perhitungan</td>
                                       <td>$p->poin</td>
-                                      <td><input type='file'></td>
-                                  </tr>";}
+                                      <td><input type='file' name='berkas'></div></td>
+                                  </tr>";
+                                  $no++;}
                         ?>
                       </tbody>
                     </table>
@@ -206,7 +208,6 @@
                   </center>
                   </form>
                 </div>
-
                 
               </div>
             

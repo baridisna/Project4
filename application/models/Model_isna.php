@@ -141,6 +141,18 @@ class Model_isna extends CI_Model
 	     	//Query insert into
 		}
 
+		public function dataPegawai()
+	{
+		//$unit = 'JKTOF';
+		$unit = $this->session->userdata('admin_username');
+		$hasil = $this->db->query("SELECT nopeg, nama, unit FROM tb_pegawai WHERE unit='".$unit."'");
+		if($hasil->num_rows() > 0){
+			return $hasil->result()	;
+		} else{
+			return "kosong";
+		}
+	}
+
 	
 }
 ?>

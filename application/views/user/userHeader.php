@@ -56,7 +56,7 @@
               </div>
               <div class="profile_info">
                 <span>Selamat Datang,</span>
-                <h2><?php echo $this->session->userdata('admin_username');?></h2>
+                <h2><?php echo $this->session->userdata('nopeg');?></h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
@@ -70,12 +70,12 @@
                 <ul class="nav side-menu">
 
                 <!-- Isi Nilai-->
-                <li><a><i class="fa fa-edit active"></i> Isi Nilai <span class=""></span></a>
+                <li><a href="<?php echo base_url();?>User/"><i class="fa fa-edit active"></i> Isi Nilai <span class=""></span></a>
                 </li>
                 <!-- End isi nilai-->
 
                 <!-- Ranking-->
-                <li><a><i class="fa fa-edit active"></i> Profil <span class=""></span></a>
+                <li><a href="<?php echo base_url();?>User/profil"><i class="fa fa-edit active"></i> Profil <span class=""></span></a>
                 </li>
                 <!-- End ranking-->
 

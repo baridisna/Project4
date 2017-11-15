@@ -1,0 +1,58 @@
+.bg-primary {
+	background-color: #337ab7;
+	color: #ffffff;
+}
+
+.bg-success {
+	background-color: #26b99a;
+	color: #ffffff;
+}
+
+.bg-info {
+	background-color: #5bc0de;
+	color: #ffffff;
+}
+
+.bg-warning {
+	background-color: #ec971f;
+	color: #ffffff;
+}
+
+.bg-danger {
+	background-color: #d9534f;
+	color: #ffffff;
+}
+
+.bg-primary .icon {
+	    color: #000;
+    opacity: 0.5;
+}
+
+.bg-success .icon {
+	    color: #000;
+    opacity: 0.5;
+}
+
+.bg-info .icon {
+	    color: #000;
+    opacity: 0.5;
+}
+
+.bg-warning .icon {
+	    color: #000;
+    opacity: 0.5;
+}
+
+.bg-danger .icon {
+	    color: #000;
+    opacity: 0.5;
+} 
+
+.tile-stats h3 {
+	color: #fff;
+}
+
+.tabel-ide th {
+	background-color: #3f5367;
+	color: #fff;
+}

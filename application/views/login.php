@@ -46,7 +46,7 @@
           <section class="login_content">
               <div class="signupSection">
               <div class="info">
-                <h2>Survei Asessment</h2>
+                <h2>Learning Point</h2>
                 <br>
                 <img src="<?php echo base_url();?>/assets/images/logo garuda putih.png">
                 <br>
@@ -77,7 +77,7 @@
           <section class="login_content">
              <div class="signupSection">
                   <div class="info">
-                    <h2>Survei Assessment</h2>
+                    <h2>Learning Point</h2>
                     <br>
                     <img src="<?php echo base_url();?>/assets/images/logo garuda putih.png" height="30%">
                     <br>

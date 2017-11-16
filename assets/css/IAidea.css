@@ -56,3 +56,7 @@
 	background-color: #3f5367;
 	color: #fff;
 }
+
+ .hiddenRow {
+    padding: 0 !important;
+}

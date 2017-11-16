@@ -146,35 +146,28 @@
       <div class="main_container">
         <div class="right_col" role="main" style="min-height: 720px">
               <div class="">
-                <div class="page-title">
-                  <div class="title_left">
-                    <h3><strong> Kuesioner </strong>Culture Assessment<!-- <small> Formulir asessment  <strong> karyawan </strong></small> --></h3>
-                  </div>
-                </div>
+                
               </div>
 
               <div class="row">
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
+                  <center>
+                    <div class="page-title">
+                      <h2>Data <strong>Submitted  </strong><!-- <small> Formulir asessment  <strong> karyawan </strong></small> --></h2>
+                    </div>
+                  </center>
 
                   <div class="x_content">
-                      <center> click thumbs up to finish action </center>
-                      <div class="grid">
-                      <br />
-                      <div class="grid__item">
-                        <center><button class="icobutton icobutton--thumbs-up"><span class="fa fa-thumbs-up fa-3x" ><h2>submitted</h2></span></button><center>
-                      </div>
-                      <br />
-                    </div>
-
-                     <center>
+                    <center>
+                      <img src="<?php echo base_url()?>/assets/images/success.gif" alt="Data Submitted" width="50%">
+                    </center>
+                    
+                    <center>
                       <button type="button" class="btn btn-round btn-danger btn-sm" href="#">Log Out <span class="fa fa-sign-out"></span></button>
                       <button type="button" class="btn btn-round btn-primary btn-sm" href="#">Log In as Admin <span class="fa fa-user"></span></button>
                     </center>
-                    <!-- <?php 
                     
-                      // "<td ><center>".anchor('user/'.$p->id_kuesioner,'<span class="fa fa-sign-out"></span> Edit')."</center></td>"
-                      ?> -->
                   </div>
                 </div>
               </div>

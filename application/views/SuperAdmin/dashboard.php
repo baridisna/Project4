@@ -1,622 +1,364 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- Meta, title, CSS, favicons, etc. -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Garuda Indonesia  </title>
-
-    <!-- Bootstrap -->
-    <link href="<?php echo base_url();?>/assets/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="<?php echo base_url();?>/assets/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <!-- NProgress -->
-    <link href="<?php echo base_url();?>/assets/vendors/nprogress/nprogress.css" rel="stylesheet">
-    <!-- iCheck -->
-    <link href="<?php echo base_url();?>/assets/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
-
-    <!-- bootstrap-progressbar -->
-    <link href="<?php echo base_url();?>/assets/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
-    <!-- JQVMap -->
-    <link href="<?php echo base_url();?>/assets/vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
-    <!-- bootstrap-daterangepicker -->
-    <link href="<?php echo base_url();?>/assets/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
-
-    <!-- Custom Theme Style -->
-    <link href="<?php echo base_url();?>/assets/build/css/custom.min.css" rel="stylesheet">
-  </head>
-
-  <body class="nav-md">
-    <div class="container body">
-      <div class="main_container">
-        <div class="col-md-3 left_col">
-          <div class="left_col scroll-view">
-            <div class="navbar nav_title" style="border: 0;">
-			<h2></h2>
-              <a href="index.html" class="site_title"></i> <span>Garuda Indonesia</span></a>
-            </div>
-
-            <div class="clearfix"></div>
-
-            <!-- menu profile quick info -->
-            <div class="profile clearfix">
-              <div class="profile_pic">
-                <img src="<?php echo base_url();?>/assets/images/img.jpg" alt="..." class="img-circle profile_img">
-              </div>
-              <div class="profile_info">
-                <span>Selamat Datang,</span>
-                <h2><?php echo $this->session->userdata('admin_username');?></h2>
-              </div>
-            </div>
-            <!-- /menu profile quick info -->
-
-            <br />
-
-            <!-- sidebar menu -->
-            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu"> <!-- General Body -->
-              <div class="menu_section">
-                <h3></h3>
-                <ul class="nav side-menu">
-
-				<!-- Corporate-->
-				<li><a><i class="fa fa-plane"></i> Corporate <span class=""></span></a>
-				<ul class="nav child_menu">
-                      <li><a href="<?php echo base_url()."admin/corporate"?>">Garuda Indonesia</a></li>
-				 </ul>
-				</li>
-				<!-- End Corporate-->
-
-					  <!-- Direktorat-->
-                  <li><a><i class="fa fa-home"></i> Direktorat <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="<?php echo base_url()."admin/jktdc"?>">JKTDC</a></li>
-					  <li><a href="<?php echo base_url()."admin/jktde"?>">JKTDE</a></li>
-					  <li><a href="<?php echo base_url()."admin/jktdf"?>">JKTDF</a></li>
-					  <li><a href="<?php echo base_url()."admin/jktdg"?>">JKTDG</a></li>
-					  <li><a href="<?php echo base_url()."admin/jktdn"?>">JKTDN</a></li>
-					  <li><a href="<?php echo base_url()."admin/jktdi"?>">JKTDI</a></li>
-					  <li><a href="<?php echo base_url()."admin/jktdo"?>">JKTDO</a></li>
-					  <li><a href="<?php echo base_url()."admin/jktdr"?>">JKTDR</a></li>
-                      <li><a href="<?php echo base_url()."admin/jktdz"?>">JKTDZ</a></li>
-
-                    </ul>
-                  </li>
-				  <!-- End Direktorat-->
-
-				  <!--Asessment-->
-				  <li><a><i class="fa fa-pencil"></i> Asessment <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="<?php echo base_url()."User_index/indexjktdc"?>">JKTDC</a></li>
-                      <li><a href="<?php echo base_url()."User_index/indexjktde"?>">JKTDE</a></li>
-                      <li><a href="morisjs.html">JKTDF</a></li>
-                      <li><a href="echarts.html">JKTDG</a></li>
-                      <li><a href="other_charts.html">JKTDN</a></li>
-					   <li><a href="other_charts.html">JKTDI</a></li>
-					   <li><a href="other_charts.html">JKTDO</a></li>
-					   <li><a href="other_charts.html">JKTDR</a></li>
-					   <li><a href="other_charts.html">JKTDZ</a></li>
-                    </ul>
-                  </li>
-				  <!--End Asessment-->
-
-				  <!--Form-->
-                  <li><a><i class="fa fa-edit"></i> Edit Forms <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="<?php echo base_url();?>admin/edit_kuesioner">Kuesioner</a></li>
-                      <li><a href="<?php echo base_url();?>admin/edit_presentation">Presentation</a></li>
-                      <li><a href="<?php echo base_url();?>admin/edit_fgd">FGD</a></li>
-                      <li><a href="<?php echo base_url();?>admin/edit_interview">Interview</a></li>
-                      <li><a href="<?php echo base_url();?>admin/edit_observation">Observation</a></li>
-                    </ul>
-                  </li>
-                  <!-- End Form-->
-
-
-                </ul> <!-- General Body -->
-              </div>
-
-
-            </div>
-            <!-- /sidebar menu -->
-
-            <!-- /menu footer buttons -->
-            <div class="sidebar-footer hidden-small">
-              <a data-toggle="tooltip" data-placement="top" title="Settings">
-                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-              </a>
-              <a data-toggle="tooltip" data-placement="top" title="FullScreen">
-                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
-              </a>
-              <a data-toggle="tooltip" data-placement="top" title="Lock">
-                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
-              </a>
-              <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
-                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
-              </a>
-            </div>
-            <!-- /menu footer buttons -->
-          </div>
-        </div>
-
-        <!-- top navigation -->
-        <div class="top_nav">
-          <div class="nav_menu">
-            <nav>
-              <div class="nav toggle">
-                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
-              </div>
-
-              <ul class="nav navbar-nav navbar-right">
-                <li class="">
-
-                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="<?php echo base_url();?>/assets/images/img.jpg" alt=""><?php echo $this->session->userdata('admin_username');?>
-
-
-
-                    <span class=" "></span>
-                  </a>
-                  <ul class="dropdown-menu dropdown-usermenu pull-right">
-                    <li><a href="javascript:;"> Profile</a></li>
-                    <li>
-                      <a href="javascript:;">
-                        <span class="badge bg-red pull-right">50%</span>
-                        <span>Settings</span>
-                      </a>
-                    </li>
-
-                    <li><a href="javascript:;">Help</a></li>
-                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
-                  </ul>
-                </li>
-
-					<li><a href="#" onclick="window.print()"><i class="fa fa-print">  Print</i></a><li>
-
-              </ul>
-            </nav>
-          </div>
-        </div>
-
-        <!-- /top navigation -->
+      <!-- tambahan IA Idea CSS -->
+        <link href="<?php echo base_url();?>/assets/css/IAidea.css" rel="stylesheet">
 
         <!-- page content -->
         <div class="right_col" role="main">
-          <!-- top tiles -->
-          <div class="row tile_count">
-
-
-          </div>
-          <!-- /top tiles -->
-
-
-          <div class="row">
-            <div class="col-md-12 col-sm-12 col-xs-12"> <!-- angka 12 di md san sm itu menentukan panjang cardnya sedangkan 12 di xs lebar cardnya -->
-              <div class="dashboard_graph">
-
-                <div class="">
-                  <div class="col-md-6">
-                    <h3>Direktorat JKTDC <small></small></h3> <!-- diantara <small> ini bisa di isi teks -->
-                  </div>
+          <div class="">
+            <div class="row top_tiles">
+              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12" >
+                <div class="tile-stats bg-info">
+                  <div class="icon"><i class="glyphicon glyphicon-download-alt" ></i></div>
+                  <div class="count">90</div>
+                  <h3 >Pengisi</h3>
+                  <p>Pegawai yang sudah mengisi data</p>
                 </div>
-
-
-                <div class="clearfix"></div>
+              </div>
+              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12" >
+                <div class="tile-stats bg-success">
+                  <div class="icon"><i class="glyphicon glyphicon-check"></i></div>
+                  <div class="count">80</div>
+                  <h3>Verified</h3>
+                  <p>Data masuk yang sudah diverifikasi</p>
+                </div>
+              </div>
+              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12" >
+                <div class="tile-stats bg-danger">
+                  <div class="icon"><i class="glyphicon glyphicon-unchecked"></i></div>
+                  <div class="count">7</div>
+                  <h3>Belum Diperiksa</h3>
+                  <p>Data yang masuk yang belum diverifikasi</p>
+                </div>
+              </div>
+              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12" >
+                <div class="tile-stats bg-warning">
+                  <div class="icon"><i class="glyphicon glyphicon-circle-arrow-up"></i></div>
+                  <div class="count" >2</div>
+                  <h3>Update</h3>
+                  <p>Beberapa pegawai melakukan update data</p>
+                </div>
               </div>
             </div>
 
+            <div class="page-title">
+              <div class="">
+                <center><h3>Garuda Indonesia</h3></center>
+              </div>
+
+            </div>
+
+            <div class="row">
+                <div class="x_panel">      
+                  <div class="col-md-7 col-sm-12 col-xs-12">
+                  <div class="x_title">
+                    <h2>Transaction Summary <small>Weekly progress</small></h2>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <!-- <div class="col-md-7 col-sm-12 col-xs-12"> -->
+                      <canvas id="corporate" style="height: 280px;"></canvas>
+                    <!-- </div> -->
+                  </div>
+                </div>
+
+                <div class="col-md-5 col-sm-12 col-xs-12">
+                  <div class="x_title">
+                    <h2>Pie Chart</h2>
+                    <div class="clearfix"></div>
+                  </div>
+                <div class="x_content">
+                  <table class="" style="width:100%">
+                    <tr>
+                      <td>
+                        <canvas class="canvasDoughnut" height="250" width="250" style="margin: 30px 20px 10px 0"></canvas>
+                      </td>
+                      <td>
+                        <table class="tile_info">
+                          <tr>
+                            <td>
+                              <p><i class="fa fa-square blue"></i>IOS </p>
+                            </td>
+                            <td>30%</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <p><i class="fa fa-square green"></i>Android </p>
+                            </td>
+                            <td>10%</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <p><i class="fa fa-square purple"></i>Blackberry </p>
+                            </td>
+                            <td>20%</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <p><i class="fa fa-square aero"></i>Symbian </p>
+                            </td>
+                            <td>15%</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <p><i class="fa fa-square red"></i>Others </p>
+                            </td>
+                            <td>30%</td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
           </div>
-          <br />
-
-          <div class="row">
-		  <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="x_panel">
-                  <div class="x_title">
-                    <h2>Keterangan : 4 Dimensi <small>Sessions</small></h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <ul class="dropdown-menu" role="menu">
-                          <li><a href="#">Settings 1</a>
-                          </li>
-                          <li><a href="#">Settings 2</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
-                    </ul>
-                    <div class="clearfix"></div>
-                  </div>
-				  <h3></h3>
-					 <li><a>LA : Leadership Action  </a></li>
-					 <h3></h3>
-					 <li><a>WP : Warrior Performance</a></li>
-					  <h3></h3>
-					 <li><a>PE : Program Effectiveness</a></li>
-					  <h3></h3>
-					 <li><a>IE : Impact Evaluation</a></li>
-
+<br>
+<br>
+              <div class="row">
+                <div class="col-sm-5 col-xs-12   ">
+                  <br>
+                    <center>
+                       <img src="<?php echo base_url();?>/assets/images/Pyramid.png" width="100%" >
+                    </center>
+                    <br>
                 </div>
+
+                  <div class="col-sm-7 col-xs-12  ">
+                      <div class="x_title">
+                        <center><h2>Top Profiles</h2></center>
+                          <div class="clearfix"></div>
+                      </div>
+
+                        <div class=" col-sm-2 col-xs-1 ">
+                        <center>
+                          <img src="<?php echo base_url();?>/assets/images/trophy.png" width="90%" style="opacity: 0.7; padding-top: 60%;">
+                        </center>
+                      </div>
+                        <div class="col-sm-8 col-xs-10">
+                            
+                            <ul class="list-unstyled top_profiles scroll-view">
+                              <li class="media event">
+                                <a class="pull-left border-aero profile_thumb">
+                                  <i class="fa fa-user aero"></i>
+                                </a>
+                                <div class="media-body">
+                                  <a class="title" href="#">Ms. Mary Jane</a>
+                                  <p><strong>$2300. </strong> Agent Avarage Sales </p>
+                                  <p> <small>12 Sales Today</small>
+                                  </p>
+                                </div>
+                              </li>
+                              <li class="media event">
+                                <a class="pull-left border-green profile_thumb">
+                                  <i class="fa fa-user green"></i>
+                                </a>
+                                <div class="media-body">
+                                  <a class="title" href="#">Ms. Mary Jane</a>
+                                  <p><strong>$2300. </strong> Agent Avarage Sales </p>
+                                  <p> <small>12 Sales Today</small>
+                                  </p>
+                                </div>
+                              </li>
+                              <li class="media event">
+                                <a class="pull-left border-blue profile_thumb">
+                                  <i class="fa fa-user blue"></i>
+                                </a>
+                                <div class="media-body">
+                                  <a class="title" href="#">Ms. Mary Jane</a>
+                                  <p><strong>$2300. </strong> Agent Avarage Sales </p>
+                                  <p> <small>12 Sales Today</small>
+                                  </p>
+                                </div>
+                              </li>
+                              <li class="media event">
+                                <a class="pull-left border-aero profile_thumb">
+                                  <i class="fa fa-user aero"></i>
+                                </a>
+                                <div class="media-body">
+                                  <a class="title" href="#">Ms. Mary Jane</a>
+                                  <p><strong>$2300. </strong> Agent Avarage Sales </p>
+                                  <p> <small>12 Sales Today</small>
+                                  </p>
+                                </div>
+                              </li>
+                              <li class="media event">
+                                <a class="pull-left border-green profile_thumb">
+                                  <i class="fa fa-user green"></i>
+                                </a>
+                                <div class="media-body">
+                                  <a class="title" href="#">Ms. Mary Jane</a>
+                                  <p><strong>$2300. </strong> Agent Avarage Sales </p>
+                                  <p> <small>12 Sales Today</small>
+                                  </p>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                      <div class="col-sm-2 col-xs-1 ">
+                        <center>
+                          <img src="<?php echo base_url();?>/assets/images/trophy.png" width="90%" style="opacity: 0.7; transform: scaleX(-1); padding-top: 60%;">
+                        </center>
+                      </div>
+                    </div>
+                  
+                  <div class="clearfix"> </div>
               </div>
-		    <!-- chart pertama -->
-			<div class="col-md-6 col-sm-6 col-xs-12">
-                <div class="x_panel">
-                  <div class="x_title">
-                    <h2>Bar Chart : 4 Dimensi <small>Sessions</small></h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <ul class="dropdown-menu" role="menu">
-                          <li><a href="#">Settings 1</a>
-                          </li>
-                          <li><a href="#">Settings 2</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
-                    </ul>
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="x_content">
-                    <div>
-                      <canvas id="graphradar"></canvas>
-                      <script type="text/javascript" src="<?php echo base_url();?>/assets/vendors/jquery/dist/jquery.min.js"></script>
-                      <script type="text/javascript" src="<?php echo base_url();?>/assets/vendors/Chart.js/dist/Chart.min.js"></script>
-                      <script src="<?php echo base_url();?>/assets/js/Dirjktdc.js" charset="utf-8"></script>
+<br>
+<br>
+<!--           <div class="row">
+            <div class="col-md-12">
+              <div class="x_panel">
+                <div class="x_title">
+                  <h2>Direktorat Summary <small></small></h2>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content"> -->
+
+                      <div class="row" style="text-align: center;">
+                        
+                        <div class="col-md-4 col-sm-6 col-xs-6">
+                          <div class="x_panel">
+                            <div class="x_title">
+                              <h2>Direktorat JKTDC <small></small></h2>
+                              <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                          <canvas class="canvasDoughnut" height="150" width="150" style="margin: 5px 10px 10px 0"></canvas>
+                          <canvas id="corporate"  width="150" height="150" ></canvas>
+
+                            <!-- <img src="<?php echo base_url();?>/assets/images/chart.jpg" width="250"> -->
+                          <h4 style="margin:0">Bounce Rates</h4>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 col-xs-6">
+                          <div class="x_panel">
+                            <div class="x_title">
+                              <h2>Direktorat JKTDE <small></small></h2>
+                              <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                          <canvas class="canvasDoughnut" height="150" width="150" style="margin: 5px 10px 10px 0"></canvas>
+                            <img src="<?php echo base_url();?>/assets/images/chart.jpg" width="250">
+                          <h4 style="margin:0">Bounce Rates</h4>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 col-xs-6">
+                          <div class="x_panel">
+                            <div class="x_title">
+                              <h2>Direktorat JKTDF <small></small></h2>
+                              <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                          <canvas class="canvasDoughnut" height="150" width="150" style="margin: 5px 10px 10px 0"></canvas>
+                           <img src="<?php echo base_url();?>/assets/images/chart.jpg" width="250">
+                          <h4 style="margin:0">Bounce Rates</h4>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 col-xs-6">
+                          <div class="x_panel">
+                            <div class="x_title">
+                              <h2>Direktorat JKTDG <small></small></h2>
+                              <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                          <canvas class="canvasDoughnut" height="150" width="150" style="margin: 5px 10px 10px 0"></canvas>
+                          <img src="<?php echo base_url();?>/assets/images/chart.jpg" width="250">
+                          <h4 style="margin:0">Bounce Rates</h4>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 col-xs-6">
+                          <div class="x_panel">
+                            <div class="x_title">
+                              <h2>Direktorat JKTDN <small></small></h2>
+                              <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                          <canvas class="canvasDoughnut" height="150" width="150" style="margin: 5px 10px 10px 0"></canvas>
+                            <img src="<?php echo base_url();?>/assets/images/chart.jpg" width="250">
+                          <h4 style="margin:0">Bounce Rates</h4>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 col-xs-6">
+                          <div class="x_panel">
+                            <div class="x_title">
+                              <h2>Direktorat JKTDI <small></small></h2>
+                              <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                          <canvas class="canvasDoughnut" height="150" width="150" style="margin: 5px 10px 10px 0"></canvas>
+                            <img src="<?php echo base_url();?>/assets/images/chart.jpg" width="250">
+                          <h4 style="margin:0">Bounce Rates</h4>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 col-xs-6">
+                          <div class="x_panel">
+                            <div class="x_title">
+                              <h2>Direktorat JKTDO <small></small></h2>
+                              <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                          <canvas class="canvasDoughnut" height="150" width="150" style="margin: 5px 10px 10px 0"></canvas>
+                            <img src="<?php echo base_url();?>/assets/images/chart.jpg" width="250">
+                          <h4 style="margin:0">Bounce Rates</h4>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 col-xs-6">
+                          <div class="x_panel">
+                            <div class="x_title">
+                              <h2>Direktorat JKTDR <small></small></h2>
+                              <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                          <canvas class="canvasDoughnut" height="150" width="150" style="margin: 5px 10px 10px 0"></canvas>
+                            <img src="<?php echo base_url();?>/assets/images/chart.jpg" width="250">
+                          <h4 style="margin:0">Bounce Rates</h4>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 col-xs-6">
+                          <div class="x_panel">
+                            <div class="x_title">
+                              <h2>Direktorat JKTDZ <small></small></h2>
+                              <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                          <canvas class="canvasDoughnut" height="150" width="150" style="margin: 5px 10px 10px 0"></canvas>
+                            <img src="<?php echo base_url();?>/assets/images/chart.jpg" width="250">
+                          <h4 style="margin:0">Bounce Rates</h4>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+                        <!-- <div class="col-md-2">
+                          <canvas class="canvasDoughnut" height="110" width="110" style="margin: 5px 10px 10px 0"></canvas>
+                          <h4 style="margin:0">Device Share</h4>
+                        </div> -->
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="col-md-6 col-sm-6 col-xs-12">
-                <div class="x_panel">
-                  <div class="x_title">
-                    <h2>Gauge Chart : 4 Dimensi</h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <ul class="dropdown-menu" role="menu">
-                          <li><a href="#">Settings 1</a>
-                          </li>
-                          <li><a href="#">Settings 2</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
-                    </ul>
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="x_content">
-                    <div id="echart_gauge" style="height:280px;"></div>
-                  </div>
-                </div>
-              </div>
-			   <!-- batas akhir chart pertama -->
-
-			  <!-- chart kedua -->
-
-			 <div class="col-md-6 col-sm-6 col-xs-12">
-                <div class="x_panel">
-                  <div class="x_title">
-                    <h2>Bar Charts : Leadership Action <small>Sessions</small></h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <ul class="dropdown-menu" role="menu">
-                          <li><a href="#">Settings 1</a>
-                          </li>
-                          <li><a href="#">Settings 2</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
-                    </ul>
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="x_content">
-                    <div>
-                      <canvas id="consLADirektoratjktdc"></canvas>
-                      <script src="<?php echo base_url();?>/assets/js/consLADirektoratjktdc.js" charset="utf-8"></script>
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 col-sm-6 col-xs-12">
-                <div class="x_panel">
-                  <div class="x_title">
-                    <h2>Gauge Chart :Leadership Action</h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <ul class="dropdown-menu" role="menu">
-                          <li><a href="#">Settings 1</a>
-                          </li>
-                          <li><a href="#">Settings 2</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
-                    </ul>
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="x_content">
-                    <div id="echart_gauge2" style="height:280px;"></div>
-                  </div>
-                </div>
-              </div>
-			   <!-- batas akhir chart kedua -->
-
-			   <!-- chart ketiga -->
-
-			 <div class="col-md-6 col-sm-6 col-xs-12">
-                <div class="x_panel">
-                  <div class="x_title">
-                    <h2>Bar Charts : Warrior Performance <small>Sessions</small></h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <ul class="dropdown-menu" role="menu">
-                          <li><a href="#">Settings 1</a>
-                          </li>
-                          <li><a href="#">Settings 2</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
-                    </ul>
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="x_content">
-                    <div class="">
-                      <canvas id="consWPDirektoratjktdc"></canvas>
-                      <script src="<?php echo base_url();?>/assets/js/consWPDirektoratjktdc.js" charset="utf-8"></script>
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 col-sm-6 col-xs-12">
-                <div class="x_panel">
-                  <div class="x_title">
-                    <h2>Gauge Chart : Warrior Performance</h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <ul class="dropdown-menu" role="menu">
-                          <li><a href="#">Settings 1</a>
-                          </li>
-                          <li><a href="#">Settings 2</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
-                    </ul>
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="x_content">
-                    <div id="echart_gauge3" style="height:280px;"></div>
-                  </div>
-                </div>
-              </div>
-			   <!-- batas akhir chart ketiga -->
-
-			    <!-- chart keempat -->
-
-			 <div class="col-md-6 col-sm-6 col-xs-12">
-                <div class="x_panel">
-                  <div class="x_title">
-                    <h2>Bar Charts : Program Effectiveness <small>Sessions</small></h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <ul class="dropdown-menu" role="menu">
-                          <li><a href="#">Settings 1</a>
-                          </li>
-                          <li><a href="#">Settings 2</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
-                    </ul>
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="x_content">
-                    <div style="width:100%; height:280px;">
-                      <canvas id="consPEDirektoratjktdc"></canvas>
-                      <script src="<?php echo base_url();?>/assets/js/consPEDirektoratjktdc.js" charset="utf-8"></script>
-</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 col-sm-6 col-xs-12">
-                <div class="x_panel">
-                  <div class="x_title">
-                    <h2>Gauge Chart : Program Effectiveness</h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <ul class="dropdown-menu" role="menu">
-                          <li><a href="#">Settings 1</a>
-                          </li>
-                          <li><a href="#">Settings 2</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
-                    </ul>
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="x_content">
-                    <div id="echart_gauge4" style="height:280px;"></div>
-                  </div>
-                </div>
-              </div>
-			   <!-- batas akhir chart keempat -->
-
-			   <!-- chart keelima -->
-
-			 <div class="col-md-6 col-sm-6 col-xs-12">
-                <div class="x_panel">
-                  <div class="x_title">
-                    <h2>Bar Charts : Impact Evaluation <small>Sessions</small></h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <ul class="dropdown-menu" role="menu">
-                          <li><a href="#">Settings 1</a>
-                          </li>
-                          <li><a href="#">Settings 2</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
-                    </ul>
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="x_content">
-                    <div style="width:100%; height:280px;">
-                      <canvas id="consIEDirektoratjktdc"></canvas>
-                      <script src="<?php echo base_url();?>/assets/js/consIEDirektoratjktdc.js" charset="utf-8"></script>
-</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 col-sm-6 col-xs-12">
-                <div class="x_panel">
-                  <div class="x_title">
-                    <h2>Gauge Chart : Impact Evaluation </h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <ul class="dropdown-menu" role="menu">
-                          <li><a href="#">Settings 1</a>
-                          </li>
-                          <li><a href="#">Settings 2</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
-                    </ul>
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="x_content">
-                    <div id="echart_gauge5" style="height:280px;"></div>
-                  </div>
-                </div>
-              </div>
-			   <!-- batas akhir chart kelima -->
-
-
-
-
-          </div>
               </div>
             </div>
           </div>
 
 
 
-        <!-- footer content -->
-        <footer>
-          <div class="pull-right">
-
-            <img src="<?php echo base_url();?>/assets/images/garudak2.png" />
-          </div>
-          <div class="clearfix"></div>
-        </footer>
-        <!-- /footer content -->
-      </div>
-    </div>
-
-	<!-- jQuery -->
-    <script src="<?php echo base_url();?>/assets/vendors/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap -->
-    <script src="<?php echo base_url();?>/assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- FastClick -->
-    <script src="<?php echo base_url();?>/assets/vendors/fastclick/lib/fastclick.js"></script>
-    <!-- NProgress -->
-    <script src="<?php echo base_url();?>/assets/vendors/nprogress/nprogress.js"></script>
-    <!-- morris.js -->
-    <script src="<?php echo base_url();?>/assets/vendors/raphael/raphael.min.js"></script>
-    <script src="<?php echo base_url();?>/assets/vendors/morris.js/morris.min.js"></script>
-
-	<!-- Echart.js -->
-	<script src="<?php echo base_url();?>/assets/vendors/echarts/dist/echarts.min.js"></script>
-    <!-- jQuery -->
-    <script src="<?php echo base_url();?>/assets/vendors/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap -->
-    <script src="<?php echo base_url();?>/assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- FastClick -->
-    <script src="<?php echo base_url();?>/assets/vendors/fastclick/lib/fastclick.js"></script>
-    <!-- NProgress -->
-    <script src="<?php echo base_url();?>/assets/vendors/nprogress/nprogress.js"></script>
-    <!-- Chart.js -->
-    <script src="<?php echo base_url();?>/assets/vendors/Chart.js/dist/Chart.min.js"></script>
-    <!-- gauge.js -->
-    <script src="<?php echo base_url();?>/assets/vendors/gauge.js/dist/gauge.min.js"></script>
-    <!-- bootstrap-progressbar -->
-    <script src="<?php echo base_url();?>/assets/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
-    <!-- iCheck -->
-    <script src="<?php echo base_url();?>/assets/vendors/iCheck/icheck.min.js"></script>
-    <!-- Skycons -->
-    <script src="<?php echo base_url();?>/assets/vendors/skycons/skycons.js"></script>
-    <!-- Flot -->
-    <script src="<?php echo base_url();?>/assets/vendors/Flot/jquery.flot.js"></script>
-    <script src="<?php echo base_url();?>/assets/vendors/Flot/jquery.flot.pie.js"></script>
-    <script src="<?php echo base_url();?>/assets/vendors/Flot/jquery.flot.time.js"></script>
-    <script src="<?php echo base_url();?>/assets/vendors/Flot/jquery.flot.stack.js"></script>
-    <script src="<?php echo base_url();?>/assets/vendors/Flot/jquery.flot.resize.js"></script>
-    <!-- Flot plugins -->
-    <script src="<?php echo base_url();?>/assets/vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
-    <script src="<?php echo base_url();?>/assets/vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
-    <script src="<?php echo base_url();?>/assets/vendors/flot.curvedlines/curvedLines.js"></script>
-    <!-- DateJS -->
-    <script src="<?php echo base_url();?>/assets/vendors/DateJS/build/date.js"></script>
-    <!-- JQVMap -->
-    <script src="<?php echo base_url();?>/assets/vendors/jqvmap/dist/jquery.vmap.js"></script>
-    <script src="<?php echo base_url();?>/assets/vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
-    <script src="<?php echo base_url();?>/assets/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
-    <!-- bootstrap-daterangepicker -->
-    <script src="<?php echo base_url();?>/assets/vendors/moment/min/moment.min.js"></script>
-    <script src="<?php echo base_url();?>/assets/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
-
-    <!-- Custom Theme Scripts -->
-    <script src="<?php echo base_url();?>/assets/build/js/custom.min.js"></script>
-
-  </body>
-</html>
+                  </div>
+                </div>
+        <!-- /page content -->

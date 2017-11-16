@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="icon" type="image/png" href="<?php echo base_url()?>assets/gi.ico">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>DataTables | Gentelella</title>
+    <title>Garuda Indonesia  </title>
 
     <!-- Bootstrap -->
     <link href="<?php echo base_url();?>/assets/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -17,6 +18,9 @@
     <link href="<?php echo base_url();?>/assets/vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- iCheck -->
     <link href="<?php echo base_url();?>/assets/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+    <!-- JQVMap -->
+    <link href="<?php echo base_url();?>/assets/vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
+
     <!-- Datatables -->
     <link href="<?php echo base_url();?>/assets/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
     <link href="<?php echo base_url();?>/assets/vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
@@ -24,6 +28,10 @@
     <link href="<?php echo base_url();?>/assets/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
     <link href="<?php echo base_url();?>/assets/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
 
+    <!-- bootstrap-progressbar -->
+    <link href="<?php echo base_url();?>/assets/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <!-- bootstrap-daterangepicker -->
+    <link href="<?php echo base_url();?>/assets/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
     <!-- Custom Theme Style -->
     <link href="<?php echo base_url();?>/assets/build/css/custom.css" rel="stylesheet">
     <link href="<?php echo base_url();?>/assets/css/IAidea.css" rel="stylesheet">
@@ -35,7 +43,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-			<h2></h2>
+			      <h2></h2>
               <a href="index.html" class="site_title"></i> <span>Garuda Indonesia</span></a>
             </div>
 
@@ -62,8 +70,12 @@
                 <ul class="nav side-menu">
 
 				  <!--Asessment   bagian dedy yang kuganti2 disini-->
-				  <li><a><i class="fa fa-pencil"></i> Validasi <span class=""></span></a>
-                  </li>
+				        <li>
+                  <a href="<?php echo base_url();?>Admininternal/dashboard/"><i class="fa fa-dashboard"></i> Dashboard <span class=""></span></a>
+                </li>
+                <li>
+                  <a href="<?php echo base_url();?>Admininternal/"><i class="fa fa-check-square"></i> Validasi <span class=""></span></a>
+                </li>
 				  <!--End Asessment-->
                 </ul> <!-- General Body -->
               </div>

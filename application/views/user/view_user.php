@@ -61,18 +61,19 @@
  -->        
               <div class="col-md-10 col-sm-12 col-xs-12 col-md-offset-1 col-sm-offset-0 col-xs-offset-0">
                 <center><img src="<?php echo base_url();?>assets/images/sip2.png" width='300px' ></center>
+
                 <br /> <br /> <br />
                 <div class="x_panel">
-                  <form method="POST" action="<?php echo base_url();?>User/input_nilai" role="form" enctype="multipart/form-data>
-                  <div class="x_title">
-                    <h2><?php echo $dimensi[0]->var_dimensi; ?> <small> Berikan nilai yang sesuai !!</small></h2>
-                    <div class="clearfix"></div>
+                  <form method="POST" action="<?php echo base_url();?>User/input_nilai" role="form" enctype="multipart/form-data">
+                    <div class="x_title">
+                      <h2><?php echo $dimensi[0]->var_dimensi; ?> <small> Isilah frekuensi Anda melakukan kegiatan sesuai deskripsi</small></h2>
+                      <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
 
-                    <table class="table table-striped">
+                    <table class="table table-striped ">
                       <thead>
-                        <tr>
+                        <tr class="bg-blue">
                           <th width="2%" >No</th>
                           <th>Deskripsi</th>
                           <th width="8%" >Frekuensi </th>
@@ -100,13 +101,13 @@
                     <br>
 
                   <div class="x_title">
-                    <h2><?php echo $dimensi[1]->var_dimensi; ?><small> Berikan nilai yang sesuai !!</small></h2>
+                    <h2><?php echo $dimensi[1]->var_dimensi; ?><small> Isilah frekuensi Anda melakukan kegiatan sesuai deskripsi</small></h2>
                     <div class="clearfix"></div>
                   </div>
 
                     <table class="table table-striped">
                       <thead>
-                        <tr>
+                        <tr class="bg-blue">
                           <th width="2%" >No</th>
                           <th>Deskripsi</th>
                           <th width="8%" >Frekuensi </th>
@@ -132,13 +133,13 @@
                     </table>
 
                     <div class="x_title">
-                    <h2><?php echo $dimensi[2]->var_dimensi; ?><small> Berikan nilai yang sesuai !!</small></h2>
+                    <h2><?php echo $dimensi[2]->var_dimensi; ?><small> Isilah frekuensi Anda melakukan kegiatan sesuai deskripsi</small></h2>
                     <div class="clearfix"></div>
                   </div>
 
                     <table class="table table-striped">
                       <thead>
-                        <tr>
+                        <tr class="bg-blue">
                           <th width="2%" >No</th>
                           <th>Deskripsi</th>
                           <th width="8%" >Frekuensi </th>
@@ -165,13 +166,13 @@
                     </table>
 
                     <div class="x_title">
-                    <h2><?php echo $dimensi[3]->var_dimensi; ?><small> Berikan nilai yang sesuai !!</small></h2>
+                    <h2><?php echo $dimensi[3]->var_dimensi; ?><small> Isilah frekuensi Anda melakukan kegiatan sesuai deskripsi</small></h2>
                     <div class="clearfix"></div>
                   </div>
 
                    <table class="table table-striped">
                       <thead>
-                        <tr>
+                        <tr class="bg-blue">
                           <th width="2%" >No</th>
                           <th>Deskripsi</th>
                           <th width="8%" >Frekuensi </th>

@@ -8,8 +8,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <title>Garuda Indonesia  </title>
 
-        <!-- Bootstrap -->
+    <!-- Bootstrap -->
     <link href="<?php echo base_url();?>/assets/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="<?php echo base_url();?>/assets/vendors/font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -25,7 +26,6 @@
     <link href="<?php echo base_url();?>/assets/vendors/ion.rangeSlider/css/ion.rangeSlider.css" rel="stylesheet">
     <link href="<?php echo base_url();?>/assets/vendors/ion.rangeSlider/css/ion.rangeSlider.skinFlat.css" rel="stylesheet">
 
-    <title>Garuda Indonesia  </title>
 
     <!-- bootstrap-progressbar -->
     <link href="<?php echo base_url();?>/assets/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
@@ -37,7 +37,7 @@
     <link href="<?php echo base_url();?>/assets/build/css/custom.min.css" rel="stylesheet">
   </head>
 
-  <body class="nav-md" >
+  <body class="nav-md">
     <div class="container body">
       <div class="main_container">
         <div class="col-md-3 left_col">
@@ -70,12 +70,12 @@
                 <ul class="nav side-menu">
 
                 <!-- Isi Nilai-->
-                <li><a href="<?php echo base_url();?>User/"><i class="fa fa-edit active"></i> Isi Nilai <span class=""></span></a>
+                <li><a href="<?php echo base_url();?>User/"><i class="fa fa-star active"></i> Isi Nilai <span class=""></span></a>
                 </li>
                 <!-- End isi nilai-->
 
                 <!-- Ranking-->
-                <li><a href="<?php echo base_url();?>User/profil"><i class="fa fa-edit active"></i> Profil <span class=""></span></a>
+                <li><a href="<?php echo base_url();?>User/profil"><i class="fa fa-user active"></i> Profil <span class=""></span></a>
                 </li>
                 <!-- End ranking-->
 

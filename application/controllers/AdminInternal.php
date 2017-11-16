@@ -17,6 +17,14 @@ class AdminInternal extends CI_Controller{
       $this->load->view('AdminInternal/validasi_view', $data);
       $this->load->view('AdminInternal/footer_dedy');
     }
+
+    public function dashboard()
+    {
+      $data = array('pegawai' => $this->Model_isna->dataPegawai());
+      $this->load->view('AdminInternal/header_dedy');
+      $this->load->view('SuperAdmin/dashboard', $data);
+      $this->load->view('AdminInternal/footer_dedy');
+    }
 }
 
  ?>
